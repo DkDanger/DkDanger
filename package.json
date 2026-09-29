@@ -1,0 +1,13 @@
+{
+  "name": "rana-chat",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "@netlify/functions": "^4.2.5",
+    "openai": "^5.20.3"
+  }
+}

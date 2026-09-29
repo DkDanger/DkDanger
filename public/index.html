@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#eee9df" />
+    <meta name="description" content="A thoughtful AI conversation space." />
+    <title>Rana — A thoughtful AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="masthead">
+      <a class="brand" href="/" aria-label="Rana home">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span>Rana</span>
+      </a>
+      <div class="status"><span></span>AI workspace</div>
+      <button class="new-chat" id="new-chat" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+        New thread
+      </button>
+    </header>
+
+    <main>
+      <section class="intro" id="intro">
+        <p class="eyebrow">A clear space for tangled thoughts</p>
+        <h1>What are we<br /><em>thinking through?</em></h1>
+        <p class="lede">Bring a rough idea, a difficult draft, or a question you haven’t found the words for yet.</p>
+        <div class="starters" aria-label="Conversation starters">
+          <button type="button" data-prompt="Help me turn a rough idea into a clear plan."><span>01</span>Shape an idea</button>
+          <button type="button" data-prompt="Review this draft and help me make it clearer: "><span>02</span>Polish a draft</button>
+          <button type="button" data-prompt="Explain a complex topic to me in plain language: "><span>03</span>Make sense of it</button>
+        </div>
+      </section>
+
+      <section class="conversation" id="conversation" aria-live="polite" aria-label="Conversation"></section>
+
+      <form class="composer" id="chat-form">
+        <label class="sr-only" for="prompt">Message Rana</label>
+        <textarea id="prompt" rows="1" maxlength="8000" placeholder="Write what’s on your mind…" required></textarea>
+        <div class="composer-footer">
+          <span><kbd>Enter</kbd> send · <kbd>Shift</kbd> + <kbd>Enter</kbd> new line</span>
+          <button class="send" type="submit" aria-label="Send message">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 14-7-5 14-2.5-5.5L5 12Z" /></svg>
+          </button>
+        </div>
+      </form>
+    </main>
+    <footer>Rana can make mistakes. Check important information.</footer>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
